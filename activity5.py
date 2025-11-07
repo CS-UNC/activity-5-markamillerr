@@ -41,3 +41,12 @@ def uses_only(word, letters):
            
 #print(uses_only('abra','abr'))
     
+def all_uses_only(file,letters):
+    result=[]
+    f= open(file,'r')
+    for line in f:
+        word= line.strip()
+        if uses_only(word,letters):
+            result.append(word)
+
+    return result 
